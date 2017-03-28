@@ -22,11 +22,15 @@
 
 	<link rel="stylesheet" type="text/css" href="slick/slick.css">
 
+	<link rel="stylesheet" href="vendors/css/jquery.mCustomScrollbar.css">
+
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
 
 	<script type="text/javascript" src="slick/slick.js"></script>
 
 	<script src="vendors/js/parallax.js"></script>
+
+	<script src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
 
 	<script type="text/javascript" src="vendors/js/smoothscroll.js"></script>
 
@@ -76,18 +80,30 @@
 
 					</div>
 
+					<div class="respmenubtn-box">
+									
+						<button class="respmenubtn">
+							
+							<span></span>
+							<span></span>
+							<span></span>
+
+						</button>
+
+					</div>
+
 				</div>
 
 				<div class="nav-block">
 					
-					<ul class="main-nav-list offset-ziro">
+					<ul class="main-nav-list offset-ziro scroll">
 						
-						<li><a href="#benefits" class="man-nav-link">Benefits of gymnastics</a></li>
-						<li><a href="#about" class="man-nav-link">About us</a></li>
-						<li><a href="#instructors" class="man-nav-link">Our instructors</a></li>
-						<li><a href="#programs" class="man-nav-link">Our programs</a></li>
-						<li><a href="#get_started" class="man-nav-link">How to get started?</a></li>
-						<li><a href="#contact" class="man-nav-link">Contacts</a></li>
+						<li><a href="#benefits" class="main-nav-link">Benefits of gymnastics</a></li>
+						<li><a href="#about" class="main-nav-link">About us</a></li>
+						<li><a href="#instructors" class="main-nav-link">Our instructors</a></li>
+						<li><a href="#programs" class="main-nav-link">Our programs</a></li>
+						<li><a href="#get_started" class="main-nav-link">How to get started?</a></li>
+						<li><a href="#contact" class="main-nav-link">Contacts</a></li>
 
 					</ul>
 
@@ -165,11 +181,13 @@
 
 						<div class="tab-sect">
 							
-							<div class="tabs wow fadeIn" id="read_more">
-								
-								<div class="tabs-nav-col">
-									
-									<div class="tab-nav">									
+							<div class="tabs wow fadeIn" id="read_more">								
+
+								<button type="button" class="show-tab-nav"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+
+								<div class="tabs-nav-col scroll">									
+
+									<div class="tab-nav">
 
 										<label for="tab_link_1">Flexibility</label>
 
@@ -402,8 +420,14 @@
 					<div class="row">
 						
 						<div class="article-two-cols article-left clearfix">
+
+							<div class="col-1">
+								
+
+
+							</div>
 							
-							<div class="col-1 left-col wow fadeInLeftBig">
+							<div class="col-2 big-image wow fadeInLeftBig">
 								
 								<h2>About Us</h2>
 
@@ -414,12 +438,6 @@
 								<p>Through the practice of rhythmic gymnastics, students can increase their capacity for learning, and their ability to retain information. The balance and coordination used in the practice of rhythmic gymnastics have been known to improve a student’s learning comprehension, leading to long term memory improvement.</p>
 
 								<p>As students progress in the sport, they are learning, growing, and of course, having fun along the way. Balance Academy provides a variety of activities, programs, and competitions suitable for all genders, ages, abilities.</p>
-
-							</div>
-
-							<div class="col-2">
-								
-
 
 							</div>
 
@@ -566,8 +584,18 @@
 					<div class="row" id="programs">
 
 						<div class="article-two-cols article-right clearfix">
+
+							<div class="col-1">
+								
+								<div class="img-box wow fadeIn">
+									
+									<img src="img/photo_12.jpg" alt="">
+
+								</div>
+
+							</div>
 							
-							<div class="col-1 right wow fadeInRight">
+							<div class="col-2 wow fadeInRight">
 								
 								<h2>Our Programs</h2>
 
@@ -583,15 +611,7 @@
 
 							</div>
 
-							<div class="col-2 left">
-								
-								<div class="img-box wow fadeIn">
-									
-									<img src="img/photo_12.jpg" alt="">
-
-								</div>
-
-							</div>
+							
 
 						</div>
 
@@ -717,7 +737,7 @@
 
 										<li>Saturday only</li>
 										<li>Classes available from 8am – 12pm</li>
-										<li>Classes available for ages 3-12</li>
+										<li>Classes available for ages 3-18</li>
 
 									</ul>
 
@@ -943,8 +963,16 @@
 
 
 		<script type="text/javascript">
-			
-			$('.right-col').parallax({imageSrc: 'img/form_bg.jpg'});
+
+			(function($){
+
+				$(window).on("load",function(){
+
+					$(".scroll").mCustomScrollbar();
+
+				});
+
+			})(jQuery);
 
 		</script>
 	

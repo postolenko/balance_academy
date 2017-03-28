@@ -70,6 +70,7 @@ body {
     font-size: 15px;
     line-height: 20px;
     color: #333333;
+    background: rgba(255, 255, 255, 1);
 }
 
 
@@ -611,7 +612,7 @@ a:active {
     border-bottom: 4px solid #8dbb9e;
 }
 
-.header.fixed {
+/*.header.fixed {
     background: rgba(255, 255, 255, .96);
     padding: 5px 0 0 0;
     position: fixed;
@@ -642,7 +643,7 @@ a:active {
 
 .header.fixed .man-nav-link {
     padding: 10px 25px 8px 25px;
-}
+}*/
 
 .header .top-row {
     padding: 12px 0;
@@ -780,7 +781,7 @@ a:active {
     vertical-align: top;
 }
 
-.man-nav-link {
+.main-nav-link {
     display: block;
     padding: 22px 25px 24px 25px;
     background: rgba(141, 187, 158, 0);
@@ -814,24 +815,123 @@ a:active {
 
 }
 
-.man-nav-link:link,
-.man-nav-link:visited {
+.main-nav-link:link,
+.main-nav-link:visited {
     background: rgba(141, 187, 158, 0);
     color: #5b5b5b;
 }
 
-.man-nav-link.active,
-.man-nav-link:active {
+.main-nav-link.active,
+.main-nav-link:active {
     background: rgba(141, 187, 158, 1);
     color: #ffffff;
 }
 
-.man-nav-link:hover {
+.main-nav-link:hover {
     background: rgba(141, 187, 158, 1);
     color: #ffffff;
 }
 
 /*-- /Main Navigation --*/
+
+/* ----- Responsive Menu Button ------ */
+
+.respmenubtn-box {
+    display: none;
+    width: 14%;
+}
+
+.respmenubtn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 37px;
+    height: 35px;
+    cursor: pointer;
+    position: relative;
+    z-index: 8;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.respmenubtn span {
+    display: block;
+    width: 35px;
+    height: 4px;
+    border: 1px solid #5b5b5b;
+    background: rgba(91, 91, 91, 1);
+    margin: 0 0 5px 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+
+    -webkit-transition-property: border transform;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: border transform;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: border transform;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: border transform;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: border transform;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.respmenubtn span:last-child {
+    margin: 0;
+}
+
+.respmenubtn:active {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-tap-highlight-color: transparent;
+}
+
+.respmenubtn:hover span {
+    border: 1px solid #8dbb9e;
+    background: rgba(130, 186, 150, 1);
+}
+
+.respmenubtn.active span {
+    position: relative;
+    top: -1px;
+    border: 1px solid #8dbb9e;
+    background: rgba(130, 186, 150, 1);
+}
+
+.respmenubtn.active span:last-child {
+    display: none;
+}
+
+.respmenubtn.active span:first-child {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: 3px 0 0 0;
+    position: relative;
+    top: 3px;
+}
+
+.respmenubtn.active span:nth-child(2) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* ----- / Responsive Menu Button ------ */
+
+/* ----- Scroll To Top Button ------ */
 
 .scroll-top {
     display: block;
@@ -877,6 +977,8 @@ a:active {
 .scroll-top:hover {
     opacity: 1;
 }
+
+/* ----- /Scroll To Top Button ------ */
 
 /*-------------------------------------------*/
 /* ----- CONTENT ------ */
@@ -981,12 +1083,14 @@ a:active {
 
 .tab-sect {
     padding: 10px 0;
+    background: rgba(255, 255, 255, 1);
 }
 
 .tabs {
     display: table;
     width: 100%;
     margin: 30px 0;
+    position: relative;
     border: 1px solid #d7d6d6;
 }
 
@@ -994,6 +1098,8 @@ a:active {
     display: table-cell;
     vertical-align: top;
     width: 29%;
+    background: rgba(255, 255, 255, 1);
+    border-right: 1px solid #d7d6d6;
 }
 
 .tabs-content {
@@ -1007,13 +1113,95 @@ a:active {
 
 }
 
+.show-tab-nav {
+    /*display: block;*/
+    display: none;
+    width: 40px;
+    height: 100%;
+    cursor: pointer;
+    background: rgba(130, 186, 150, .6);
+    /*background: transparent;*/
+    border: 1px solid transparent;
+    position: absolute;
+    top: 0;
+    left: -2%;
+    z-index: 3;
+
+    -webkit-transition-property: left, background;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: left, background;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: left, background;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: left, background;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: left, background;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+
+}
+
+.show-tab-nav:hover {
+    background: rgba(130, 186, 150, 1);
+}
+
+.show-tab-nav .fa {
+    position: absolute;
+    top: 3%;
+    left: 0;
+    font-size: 38px;
+    line-height: 39px;
+    /*color: #82ba96;*/
+    color: #ffffff;
+
+    -webkit-transition-property: transform;
+    -webkit-transition-duration: 1.3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: transform;
+    -moz-transition-duration: 1.3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: transform;
+    -ms-transition-duration: 1.3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: transform;
+    -o-transition-duration: 1.3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: transform;
+    transition-duration: 1.3s;
+    transition-timing-function: ease;
+
+}
+
+.show-tab-nav.show {
+    left: 45%;
+}
+
+.show-tab-nav.show .fa {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
 .tab-nav label {
     display: block;
     width: 100%;
     padding: 17px 1% 17px 11%;
     cursor: pointer;
+    position: relative;
     border-bottom: 1px solid #d7d6d6;
-    border-right: 1px solid #d7d6d6;
     font-family: "Raleway", Arial, Verdana, sans-serif;
     font-size: 19px;
     line-height: 23px;
@@ -1051,7 +1239,6 @@ a:active {
 .tab-nav label:hover,
 .tab-nav label:active,
 .tab-nav label.active {
-
     font-weight: bold;
     color: #789e87;
     background: -moz-linear-gradient(left,  rgba(226,237,225,1) 0%, rgba(255,255,255,0) 100%);
@@ -1064,6 +1251,18 @@ a:active {
 .tab-nav label.active {
     border-right-width: 0;
     border-right: 0px solid transparent;
+}
+
+.tab-nav label:active:after,
+.tab-nav label.active:after {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -1px;
+    background: rgba(255, 255, 255, 1);
 }
 
 .tab-nav label:last-child {
@@ -1125,29 +1324,29 @@ input[type=radio]:checked + .tab-content {
 
 .article-two-cols.article-left .col-1 {
     display: block;
+    float: right;
+    width: 44%;
+}
+
+.article-two-cols.article-left .col-2 {
+    display: block;
     float: left;
     width: 56%;
     padding: 0 9% 0 0;
 }
 
-.article-two-cols.article-left .col-2 {
-    display: block;
-    float: right;
-    width: 44%;
-    height: 100px;
-}
-
 .article-two-cols.article-right .col-1 {
     display: block;
-    float: right;
-    width: 59%;
-    padding: 0 0 0 2%;
+    float: left;
+    width: 41%;
+    padding: 0;
 }
 
 .article-two-cols.article-right .col-2 {
     display: block;
-    float: left;
-    width: 41%;
+    float: right;
+    width: 59%;
+    padding: 0 0 0 2%;
 }
 
 .article-two-cols .img-box {
@@ -1357,9 +1556,6 @@ input[type=radio]:checked + .tab-content {
 .classes-sect {
     padding: 58px 0;
     background: transparent;
-/*    background-image: url("img/classes_bg.jpg");
-    background-size: cover;
-    background-position: center;*/
 }
 
 .classes-thumbnails {
@@ -1451,6 +1647,9 @@ ul.mark-list li {
 }
 
 .special-box {
+    display: block;
+    width: 100%;
+    max-width: 450px;
     border: 1px solid #82ba96;
     padding: 0 0 10px 0;
 }

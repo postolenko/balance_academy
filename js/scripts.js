@@ -21,7 +21,7 @@ $(document).ready(function() {
 
     getRightFullColWidth();
 
-    // getHeaderPosition();
+    getHeaderPosition();
 
     getScrollToTopBtn();
 
@@ -33,17 +33,24 @@ $(document).ready(function() {
 
         // ----------------------------------------------------------------------------
 
+        bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
+
+        // ----------------------------------------------------------------------------
+
          getTriangleSize();
 
          getRightFullColWidth();
+
+         getHeaderPosition();
 
     });
 
     $(document).scroll(function() {
 
-        // getHeaderPosition();
+        getHeaderPosition();
 
         getScrollToTopBtn();
+
 
     });
 
@@ -94,6 +101,49 @@ $(document).ready(function() {
 
     // ------------------------------------------------------
 
+    $(function() {
+
+        $(".respmenubtn").click(function() {
+
+            if( $(".main-nav-list").is(":hidden") ) {
+
+                $(".respmenubtn").addClass("active");
+
+                $(".main-nav-list").fadeIn(300);
+
+                $(".main-nav-list").css({
+                    "top": $(".header").outerHeight() + "px",
+                    "height" : ( $(window).height() - $(".header").height() ) + "px"
+                });
+
+            } else if( $(".main-nav-list").is(":visible") ) {
+
+                $(".respmenubtn").removeClass("active");
+
+                $(".main-nav-list").fadeOut(300);
+
+            }
+
+        });
+
+    });
+
+    // ------------------------------------------------------
+
+    $(function() {
+
+        $(".show-tab-nav").click(function() {
+
+            $(".show-tab-nav, .tabs-nav-col").toggleClass("show");
+
+            // $(".tabs-nav-col").toggleClass("show");
+
+        });
+
+    });
+
+    // ------------------------------------------------------
+
     // Navigation scroll
 
         $(function() {
@@ -130,7 +180,7 @@ $(document).ready(function() {
         return false;
 
     });
-    
+
     // ----------------------------
 
     function getScrollToTopBtn() {
@@ -149,21 +199,31 @@ $(document).ready(function() {
 
     // -----------------------------------------------
 
-    // function getHeaderPosition() {
+    function getHeaderPosition() {
 
-    //     if( $(document).scrollTop() >= $(".header").height() ) {
+        // if( $(document).scrollTop() >= $(".header").height() ) {
 
-    //         $(".header").addClass("fixed");
+        //     $(".header").addClass("fixed");
 
-    //         $(".wrapper").css({"padding-top" : $(".header").height() + "px"});
+        //     $(".wrapper").css({"padding-top" : $(".header").height() + "px"});
 
-    //     } else {
+        // } else {
 
-    //         $(".header").removeClass("fixed");
+        //     $(".header").removeClass("fixed");
 
-    //     }
+        // }
 
-    // }
+        if(bodyWidth <= 768) {
+
+            $(".wrapper").css({"padding-top" :  $(".header").outerHeight(true) + "px"});
+
+        } else {
+
+            $(".wrapper").css({"padding-top" :  0 + "px"});
+
+        }
+
+    }
 
 
     // -----------------------------------------------
@@ -171,7 +231,7 @@ $(document).ready(function() {
 
     function getRightFullColWidth() {
 
-        rightColWidth = $(window).width() - $(".article-two-cols .col-2").offset().left;
+        rightColWidth = $(window).width() - $(".article-two-cols .col-1").offset().left;
 
         $(".right-col.full-width").width(rightColWidth);
 

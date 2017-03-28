@@ -15,22 +15,30 @@
 	}
 
 	.header .top-row .col-1 {
-	    width: 81%;
+		display: inline-block;
+		vertical-align: middle;
+	    width: 50%;
 	    text-align: left;
 	}
 
+	.header .top-row .col-2 {
+		display: inline-block;
+		vertical-align: middle;
+		width: 50%;
+	}
+
 	.header .logo {
-	    width: auto;
-	    height: 50px;
+	    width: 100%;
+	    max-width: 310px;
 	    margin: 5px auto;
 	}
 
 	.header .logo .logo-img {
-	    width: auto;
-	    height: 100%;
+	    width: 100%;
+	    height: auto;
 	}
 
-	.man-nav-link {
+	.main-nav-link {
 		padding: 11px 14px 7px 14px;
 	}
 
@@ -50,6 +58,442 @@
 
 @media only screen and (max-width: 768px) {
 
+	h1 {
+	    font-size: 53px;
+	    line-height: 57px;
+	}
+
+	h2 {
+	    margin: 5px 0 40px 0;
+	    padding: 0 22px;
+	    font-size: 50px;
+	    line-height: 50px;
+	}
+
+	p {
+		font-family: "Raleway", Arial, Verdana, sans-serif;
+		font-size: 16px;
+		line-height: 21px;
+		font-weight: normal;
+		color: #5b5b5b;
+		padding: 10px 0;
+	}
+
+	/*-- HEADER --*/
+
+	.header {
+		display: block;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	.header .top-row {
+	    border-bottom: none;
+	}
+
+	.header .top-row .col-1 {
+	    width: 59%;
+	}
+
+	.header .top-row .col-2 {
+	    width: 27%;
+	}
+
+	.languages li {
+	    padding: 2px;
+	}
+
+	.lang-link {
+	    font-size: 13px;
+	    line-height: 14px;
+	}
+
+	.respmenubtn-box {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.main-nav-list {
+		/*display: block;*/
+		display: none;
+		width: 100%;
+		min-height: 90vh;
+		padding: 20px 0 30px 0;
+		background: rgba(130, 186, 150, .9);
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	.main-nav-list li {
+		display: block;
+		width: 100%;
+	}
+
+	.main-nav-link {
+		display: block;
+		width: 100%;
+		font-weight: bold;
+		color: #ffffff;
+	}
+
+	.main-nav-link:link,
+	.main-nav-link:visited {
+		background: rgba(141, 187, 158, 0);
+		color: #ffffff;
+	}
+
+	.main-nav-link.active,
+	.main-nav-link:active {
+	    background: rgba(255, 255, 255, 1);
+	    color: #82ba96;
+	}
+
+	.main-nav-link:hover {
+	    background: rgba(255, 255, 255, 1);
+	    color: #82ba96;
+	}
+	/*-- /HEADER --*/
+
+	/*-- Promo Box - Section 1 --*/
+
+	.paralax-promo {
+	    padding: 57px 0 100px 0;
+	}
+
+	.shape:after {
+	    margin: 26px auto 7px auto;
+	}
+
+	.promo-p {
+	    font-size: 18px;
+	    line-height: 29px;
+	    padding: 5px 0;
+	}
+
+	.green-link {
+	    margin: 26px 0;
+	}
+
+	/*-- /Promo Box - Section 1 --*/
+
+	/*-- Benefits - Section 2 --*/
+
+	.jumbotron {
+	    margin: -70px 0 67px 0;
+	}
+
+	.jumbotron .inner-block {
+	    padding: 55px 4% 15px 4%;
+	}
+
+	/*-- /Benefits - Section 2 --*/
+
+	/*-- About Us - Section 3 --*/
+
+	.article-sect {
+		padding: 17px 0;
+	}
+
+	.article-two-cols.article-left .col-2 {
+	    float: none;
+	    width: 100%;
+	    padding: 29px 2% 5px 2%;
+	}
+
+	.article-two-cols.article-left .col-2.big-image {
+		position: relative;
+	    z-index: 2;
+	    background: rgba(255, 255, 255, .7);
+	}
+
+	.article-two-cols h2 {
+	    margin: 5px 0 40px 0;
+	}
+
+	.article-two-cols.article-left .col-1 {
+	    float: none;
+	    width: 100%;
+	}
+
+	.right-col {
+	    width: 100% !important;
+	    height: 100%;
+	    position: absolute;
+	    top: 0;
+	    left: 0;   
+	}
+
+	.article-two-cols.article-right .col-1 {
+	    float: none;
+	    width: 100%;
+	}
+
+	.article-two-cols .img-box {
+	    margin: 0 auto;
+	}
+
+	.article-two-cols.article-right .col-2 {
+		float: none;
+		width: 100%;
+		padding: 30px 0 0 0;
+	}
+
+	/*-- Our Instructors - Section 4 --*/
+
+	.instructors-sect {
+		padding: 20px 0;
+	}
+
+	.our-instructors-thumbnails .thumbnail {
+	    width: 100%;
+	    padding: 35px 0 20px 0;
+	    border-bottom: 1px solid #dfdfdf;
+	}
+
+	.our-instructors-thumbnails .thumbnail:last-child {
+		border-bottom: none;
+	}
+
+	.our-instructors-thumbnails .top-box {
+	    padding: 0 0 20px 0;
+	    min-height: auto;
+	}
+
+	.our-instructors-thumbnails .top-box .col-1 {
+	    width: 36%;
+	    padding: 0 1% 0 0;
+	}
+
+	.our-instructors-thumbnails .top-box .col-2 {
+	    width: 64%;
+	}
+
+	/*-- /Our Instructors - Section 4 --*/
+
+	/*-- How to get started? - Section 6 --*/
+
+	.get-strated-sect {
+		padding: 30px 0;
+	}
+
+	.get-strated-thumbnails {
+	    padding: 10px 0;
+	}
+
+	.get-strated-thumbnails .thumbnail {
+	    width: 100%;
+	}
+
+	.get-strated-thumbnails .thumbnail-inner {
+	    min-height: auto;
+	    padding: 20px 5% 36px 5%;
+	}
+
+	.get-strated-thumbnails .icon-box {
+	    padding: 0;
+	}
+
+	.get-strated-thumbnails h3 {
+	    min-height: auto;
+	    margin: 0 0 11px 0;
+	    padding: 10px 0 28px 0;
+	}
+
+	/*-- /How to get started? - Section 6 --*/
+
+	/*-- Classes - Section 7 --*/
+
+	.classes-sect {
+	    padding: 43px 0;
+	}
+
+	.classes-thumbnails {
+	    padding: 10px 0 13px 0;
+	}
+
+	.classes-thumbnails .thumbnail {
+		width: 100%;
+		padding: 10px 0;
+	}
+
+	/*-- Classes - Section 7 --*/
+
+	/*-- Contacts - Section 8 --*/
+
+	.contacts-sect {
+	    padding: 35px 0 25px 0;
+	}
+
+	.two-cols-sect .col {
+	    float: left;
+	    padding: 10px 0;
+	}
+
+	.two-cols-sect .col-1,
+	.two-cols-sect .col-2 {
+	    width: 100%;
+	}
+
+	.send-sect {
+	    margin: 79px 0;
+	}
+
+	.send-sect h2 {
+	    margin: -40px 0 28px 0;
+	}
+
+	.forn-box {
+	    display: block;
+	    width: 92%;
+	    margin: 0 auto;
+	    padding: 5px 0 24px 0;
+	}
+
+	/*-- /Contacts - Section 8 --*/
+
+	/* ----- FOOTER ------ */
+
+	.footer .col-1,
+	.footer .col-2 {
+		width: 100%;
+		padding: 10px 0;
+	}
+
+	.footer .col-2 {
+		text-align: left;
+	}
+
+	/* ----- /FOOTER ------ */
+
+}
+
+@media only screen and (max-width: 600px) {
+
+	h1 {
+	    font-size: 49px;
+	    line-height: 49px;
+	}
+
+	h2 {
+	    padding: 0px 22px;
+	    font-size: 38px;
+	    line-height: 38px;
+	}
+
+	/*-- Promo Box - Section 1 --*/
+
+	.paralax-promo {
+	    padding: 30px 0 80px 0;
+	}
+
+	.shape:after {
+	    margin: 26px auto 7px auto;
+	}
+
+	/*-- /Promo Box - Section 1 --*/
+
+	/*-- Benefits - Section 2 --*/
+
+	.jumbotron .inner-block {
+	    padding: 27px 1% 5px 1%;
+	}
+
+	.show-tab-nav {
+	    display: block;
+	}
+
+	.tabs-nav-col {
+		width: 45%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		z-index: 2;
+		left: -47%;
+	}
+
+	.tabs-nav-col.show {
+		left: 0;
+	}
+
+	.tabs-content {
+		width: 100%;
+		padding: 9px 2% 9px 45px;
+	}
+
+	.tab-nav label {
+	    display: block;
+	    width: 100%;
+	    padding: 10px 2% 9px 6%;
+	    cursor: pointer;
+	    position: relative;
+	    border-bottom: 1px solid #d7d6d6;
+	    font-family: "Raleway", Arial, Verdana, sans-serif;
+	    font-size: 17px;
+	    line-height: 22px;
+	}
+
+	/*-- /Benefits - Section 2 --*/
+
+	/*-- Our Instructors - Section 4 --*/
+
+	.our-instructors-thumbnails .top-box .col-1 {
+	    width: 63%;
+	}
+
+	.our-instructors-thumbnails .top-box .col-2 {
+	    width: 37%;
+	}
+
+	/*-- /Our Instructors - Section 4 --*/
+
+	/*-- How to get started? - Section 6 --*/
+
+	.get-strated-sect h2:after {
+	    width: 97%;
+	}
+
+	/*-- /How to get started? - Section 6 --*/
+
+	/*-- Contacts - Section 8 --*/
+
+	ul.mark-list li {
+	    font-size: 18px;
+	    line-height: 23px;
+	    padding: 7px 0;
+	}
+
+	ul.mark-list li:before {
+	    width: 31px;
+	}
+
+	.special-box {
+	    margin: 9px 0;
+	}
+
+	.special-col-1 {
+	    width: 46%;
+	}
+
+	.special-col-2 {
+	    width: 54%;
+	}
+
+	.promo-special .p-1 {
+		font-size: 21px;
+		line-height: 21px;
+	}
+
+	.send-sect h2 {
+		margin: -31px 0 9px 0;
+		padding: 16px 33px;
+		font-size: 38px;
+		line-height: 38px;
+	}
+
+	/*-- /Contacts - Section 8 --*/
 
 
 }
@@ -58,6 +502,27 @@
 
 @media only screen and (max-width: 480px) {
 
+	/* ----- FOOTER ------ */
 
+	.soc-list {
+	    width: 100%;
+	    padding: 20px 0;
+	}
+
+	.footer {
+	    padding: 30px 0 3px;
+	}
+
+	/* ----- /FOOTER ------ */
+
+}
+
+
+@media only screen and (min-width: 769px) {
+
+	.main-nav-list {
+		display: block !important;
+		height: auto !important;
+	}
 
 }
