@@ -5,7 +5,7 @@
 /*------------------*/
 
 @font-face {
-    font-family: "fonts/Raleway";
+    font-family: "Raleway";
     src: url("fonts/Raleway-SemiBold.eot");
     src: url("fonts/Raleway-SemiBold.eot?#iefix") format("embedded-opentype"),
         url("fonts/Raleway-SemiBold.woff2") format("woff2"),
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-    font-family: "fonts/Raleway";
+    font-family: "Raleway";
     src: url("fonts/Raleway-Regular.eot");
     src: url("fonts/Raleway-Regular.eot?#iefix") format("embedded-opentype"),
         url("fonts/Raleway-Regular.woff2") format("woff2"),
@@ -29,7 +29,7 @@
 }
 
 @font-face {
-    font-family: "fonts/Raleway";
+    font-family: "Raleway";
     src: url("fonts/Raleway-Bold.eot");
     src: url("fonts/Raleway-Bold.eot?#iefix") format("embedded-opentype"),
         url("fonts/Raleway-Bold.woff2") format("woff2"),
