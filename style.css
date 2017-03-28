@@ -1062,7 +1062,8 @@ a:active {
 
 .tab-nav label:active,
 .tab-nav label.active {
-    border-right: 1px solid transparent;
+    border-right-width: 0;
+    border-right: 0px solid transparent;
 }
 
 .tab-nav label:last-child {
@@ -1355,9 +1356,11 @@ input[type=radio]:checked + .tab-content {
 
 .classes-sect {
     padding: 58px 0;
-    background-image: url("img/classes_bg.jpg");
+    background: transparent;
+/*    background-image: url("img/classes_bg.jpg");
     background-size: cover;
-    background-position: center;}
+    background-position: center;*/
+}
 
 .classes-thumbnails {
     padding: 36px 0 13px 0;
