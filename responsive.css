@@ -319,7 +319,7 @@
 		padding: 10px 0;
 	}
 
-	/*-- Classes - Section 7 --*/
+	/*-- /Classes - Section 7 --*/
 
 	/*-- Contacts - Section 8 --*/
 
@@ -501,6 +501,15 @@
 
 
 @media only screen and (max-width: 480px) {
+
+	/*-- Classes - Section 7 --*/
+
+	.classes-thumbnails li {
+	    font-size: 16px;
+	    line-height: 22px;
+	}
+
+	/*-- /Classes - Section 7 --*/
 
 	/* ----- FOOTER ------ */
 
