@@ -1,6 +1,8 @@
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1140px) {
 
-
+	.row {
+		padding: 0 2%;
+	}
 
 }
 
@@ -11,7 +13,7 @@
 }
 
 
-@media only screen and (max-width: 737px) {
+@media only screen and (max-width: 768px) {
 
 
 
