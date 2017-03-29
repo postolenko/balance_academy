@@ -136,8 +136,6 @@ $(document).ready(function() {
 
             $(".show-tab-nav, .tabs-nav-col").toggleClass("show");
 
-            // $(".tabs-nav-col").toggleClass("show");
-
         });
 
     });
@@ -200,18 +198,6 @@ $(document).ready(function() {
     // -----------------------------------------------
 
     function getHeaderPosition() {
-
-        // if( $(document).scrollTop() >= $(".header").height() ) {
-
-        //     $(".header").addClass("fixed");
-
-        //     $(".wrapper").css({"padding-top" : $(".header").height() + "px"});
-
-        // } else {
-
-        //     $(".header").removeClass("fixed");
-
-        // }
 
         if(bodyWidth <= 768) {
 

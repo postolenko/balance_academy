@@ -44,15 +44,6 @@
 
 	/*-- /HEADER --*/
 
-
-
-
-}
-
-
-@media only screen and (max-width: 1024px) {
-
-
 }
 
 
@@ -381,6 +372,10 @@
 	    padding: 0px 22px;
 	    font-size: 38px;
 	    line-height: 38px;
+	}
+
+	h2:after {
+	    width: 99%;
 	}
 
 	/*-- Promo Box - Section 1 --*/
