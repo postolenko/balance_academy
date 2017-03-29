@@ -44,15 +44,6 @@
 
 	/*-- /HEADER --*/
 
-
-
-
-}
-
-
-@media only screen and (max-width: 1024px) {
-
-
 }
 
 
@@ -373,8 +364,8 @@
 @media only screen and (max-width: 600px) {
 
 	h1 {
-	    font-size: 49px;
-	    line-height: 49px;
+		font-size: 47px;
+    	line-height: 48px;
 	}
 
 	h2 {
