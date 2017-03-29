@@ -20,13 +20,9 @@
 
 	<link rel="stylesheet" type="text/css" href="responsive.css">
 
-	<link rel="stylesheet" type="text/css" href="slick/slick.css">
-
 	<link rel="stylesheet" href="vendors/css/jquery.mCustomScrollbar.css">
 
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
-
-	<script type="text/javascript" src="slick/slick.js"></script>
 
 	<script src="vendors/js/parallax.js"></script>
 
@@ -74,7 +70,7 @@
 							
 							<li><a href="#" class="lang-link active">English</a></li>
 
-							<li><a href="japan/index.html" class="lang-link">日本語</a></li>
+							<li><a href="japan/" class="lang-link">日本語</a></li>
 
 						</ul>
 
@@ -104,6 +100,34 @@
 						<li><a href="#programs" class="main-nav-link">Our programs</a></li>
 						<li><a href="#get_started" class="main-nav-link">How to get started?</a></li>
 						<li><a href="#contact" class="main-nav-link">Contacts</a></li>
+
+						<li><a href="#benefits" class="main-nav-link">Benefits of gymnastics</a></li>
+						<li><a href="#about" class="main-nav-link">About us</a></li>
+						<li><a href="#instructors" class="main-nav-link">Our instructors</a></li>
+						<li><a href="#programs" class="main-nav-link">Our programs</a></li>
+						<li><a href="#get_started" class="main-nav-link">How to get started?</a></li>
+						<li><a href="#contact" class="main-nav-link">Contacts</a></li>
+
+						<li><a href="#benefits" class="main-nav-link">Benefits of gymnastics</a></li>
+						<li><a href="#about" class="main-nav-link">About us</a></li>
+						<li><a href="#instructors" class="main-nav-link">Our instructors</a></li>
+						<li><a href="#programs" class="main-nav-link">Our programs</a></li>
+						<li><a href="#get_started" class="main-nav-link">How to get started?</a></li>
+						<li><a href="#contact" class="main-nav-link">Contacts</a></li>
+
+						<li><a href="#benefits" class="main-nav-link">Benefits of gymnastics</a></li>
+						<li><a href="#about" class="main-nav-link">About us</a></li>
+						<li><a href="#instructors" class="main-nav-link">Our instructors</a></li>
+						<li><a href="#programs" class="main-nav-link">Our programs</a></li>
+						<li><a href="#get_started" class="main-nav-link">How to get started?</a></li>
+						<li><a href="#contact" class="main-nav-link">Contacts</a></li>
+
+						<li><a href="#benefits" class="main-nav-link">Benefits of gymnastics</a></li>
+						<li><a href="#about" class="main-nav-link">About us</a></li>
+						<li><a href="#instructors" class="main-nav-link">Our instructors</a></li>
+						<li><a href="#programs" class="main-nav-link">Our programs</a></li>
+						<li><a href="#get_started" class="main-nav-link">How to get started?</a></li>
+						<li><a href="#contact" class="main-nav-link">Contacts Last</a></li>
 
 					</ul>
 
@@ -165,11 +189,11 @@
 
 								<header>
 
-									<h2>Benefits of Gymnastics</h2>
+									<h2>Benefits of Rhythmic Gymnastics</h2>
 
 								</header>
 
-								<p>The benefits of gymnastics are not simply physical. The continued practice and mastery of gymnastics also leads to several other benefits. Contributing to the production of well-rounded, healthy children and young adults.</p>
+								<p>The benefits of rhythmic gymnastics are not simply physical. The continued practice and mastery of gymnastics also leads to several other benefits. Contributing to the production of well-rounded, healthy children and young adults.</p>
 
 								<p>What are the benefits:</p>
 
@@ -215,7 +239,7 @@
 									
 									<div>									
 
-										<input class="tab-radio" type="radio" name="tab_nav" id="tab_link_1" checked />
+										<input class="tab-radio" type="radio" name="tab_nav" id="tab_link_1" />
 
 										<div class="tab-content">
 											
@@ -239,11 +263,11 @@
 
 									<div>									
 
-										<input class="tab-radio" type="radio" name="tab_nav" id="tab_link_3" />
+										<input class="tab-radio" type="radio" name="tab_nav" id="tab_link_3" checked/>
 
 										<div class="tab-content">
 											
-											<p>Spatial awareness is also known as spatial recognition ability, and refers to the ability to grasp (recognize) things in three dimensions.</p>
+											<p class="font-25 green">Spatial awareness is also known as spatial recognition ability, and refers to the ability to grasp (recognize) things in three dimensions.</p>
 											<p>Three dimensions refers to space with such things as verticality, horizontal breadth, height, ups and downs, and depth, in other words how we normally feel spaces around us.</p>
 											<p>Through strengthing depth perception and improving coordination it keeps the brain sharp and plays a vital role in further development and enhancement. 
 											Furthermore, as it also influences processes such as protocols, one can expect improvements in actual learning method themselves.</p>
@@ -786,13 +810,13 @@
 
 							<div class="forn-box">
 								
-								<form>
+								<form id="feedback_form" method="post" action="processform.php">
 									
 									<div class="input-box">
 										
 										<i class="icon fa fa-pencil-square-o" aria-hidden="true"></i>
 
-										<input type="text" placeholder="Your name" />
+										<input type="text" placeholder="Your name" name="name" />
 
 									</div>
 
@@ -800,7 +824,7 @@
 										
 										<i class="icon fa fa-envelope-o" aria-hidden="true"></i>
 
-										<input type="email" placeholder="Your e-mail" />
+										<input type="email" placeholder="Your e-mail" name="email" />
 
 									</div>
 
@@ -808,15 +832,17 @@
 										
 										<i class="icon user-icon"></i>
 
-										<textarea placeholder="Your message"></textarea>
+										<textarea placeholder="Your message" name="msg"></textarea>
 
 									</div>
 
 									<div class="send-btn-box">
 										
-										<button type="button" class="green-link"><span><i class="fa fa-envelope-o" aria-hidden="true"></i>Send message</span></button>
+										<button type="submit" class="green-link submit clear"><span><i class="fa fa-envelope-o" aria-hidden="true"></i>Send message</span></button>
 
 									</div>
+
+									<div class="sent_result" id="sendresult1"></div>
 
 								</form>
 
@@ -894,6 +920,8 @@
 		<!-- /Footer -->
 
 		<script src="js/scripts.js"></script>
+
+		<script src="js/sendmail.js"></script>
 
 
 		<script type="text/javascript">
